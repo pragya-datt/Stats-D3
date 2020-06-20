@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Bar chart with D3.js</title>
+  <link rel="stylesheet" href="./index.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <script src="https://d3js.org/d3-random.v2.min.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+  <div id='layout'>
+    <!-- <h2>Bar chart example</h2> -->
+    <div id='container'>
+        <svg onload="randomize()" id="gen"></svg><br><br>
+        <button onclick="randomize()">Click To Randomize</button><br><br><br><br>
+
+        <!-- <form id="form"> -->
+          <h3><U>CUSTOMIZATION</U></h3>
+          <table cellspacing="0" cellpadding="6" style="padding:25px; border:1px dotted #ccc; ">
+            <tr>
+              <td><label>Sample Size:</label></td>
+              <td><input id = "sample_size" name="input1" type="number" placeholder="20"/></td>
+            </tr>
+            <tr>
+              <td><label>Standard Deviation:</label></td>
+              <td><input id = "replace" type="radio" name="question" value="true" checked="checked" />
+                <label>Without Replacement</label> <br>
+                <input id = "replace" type="radio" name="question" value="false" />
+                <label>With Replacement</label></td>
+            </tr>
+            <tr>
+              <td><label>Normal Distribution with:</label></td>
+              <td><label>Mean = </label></td>
+              <td><input id = "mean" name="input2" type="number" placeholder="0"/></td>
+              <td><label>Standard Deviation = </label></td>
+              <td><input id = "sd" name="input3" type="number" placeholder="1"/></td>
+              <td><button type="submit" onclick="normal()">Normal Distribution</button></td>
+            </tr>
+            <tr>
+              <td><label>Uniform Distribution with:</label></td>
+              <td><label>Minimum = </label></td>
+              <td><input id = "u_min" name="input4" type="number" placeholder="0"/></td>
+              <td><label>Maximum = </label></td>
+              <td><input id = "u_max" name="input5" type="number" placeholder="100"/></td>
+              <td><button type="submit" onclick="uniform()">Uniform Distribution</button></td>
+            </tr>
+            <tr>
+              <td><label>Exponential Distribution with:</label></td>
+              <td><label>Lambda = </label></td>
+              <td><input id = "lambda" name="input6" type="number" placeholder="1"/></td>
+              <td><button type="submit" onclick="exponential()">Exponential Distribution</button></td>
+            </tr>
+            <!-- <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><button type="submit" onclick="submitForm()">Submit</button></td>
+            </tr> -->
+          </table>
+        <!-- </form> -->
+
+    </div>
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>
